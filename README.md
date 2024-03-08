@@ -43,5 +43,7 @@ Important:
 
 More command: [https://docs.python.org/3/using/cmdline.html]
 
-Forms:Jaqueline de Almeida
-Software development - Ruby on Rails, NodeJs, Javascript
+Jaqueline de Almeida
+
+- Software development - Ruby on Rails, NodeJs, Javascript
+- Linkedin [https://www.linkedin.com/in/jaqueline-de-almeida/]
