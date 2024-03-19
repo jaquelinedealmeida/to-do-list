@@ -26,7 +26,7 @@ import pandas
 table= pandas.read_csv("produtos.csv")
 
 print(table)
-
+    
 for line in table.index:
     #click on the first field
     pyautogui.click(x=431, y=267)

@@ -19,7 +19,7 @@ This system is fake. Anyone e-mail can be register.
 
 ### Step 3: Import database
 
-- With Pandas: pip install pandas numpy openpyxl - any database type
+- With Pandas: ´pip install pandas numpy openpyxl´ - any database type
 - With function .read it is possible read any file type
 
 ### Step 4: Register one product
