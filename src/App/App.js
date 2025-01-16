@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import AddTask from "../AddTask/AddTask.js"; // Certifique-se de ter este componente
-import { getTasks, addTask,deleteTask } from "../../services/api.js" ; // getTasks pode ser usado para buscar as tarefas
-import '../App/App.css'; // Certifique-se de ter este arquivo
-import TaskList from "../TaskList/TaskList"; 
+import AddTask from "../components/AddTask/AddTask.js"; 
+import { getTasks, addTask,deleteTask } from "../services/api.js" ; // getTasks pode ser usado para buscar as tarefas
+import './App.css'; 
+import TaskList from "../components/TaskList/TaskList.js"; 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
@@ -56,7 +56,8 @@ const handleAddTask = async (taskText) => {
 
   return (
 <>
-  <div className="app-container">
+  <main className="app-content">
+    <div className="app-container">
     <h1 className="app-title">To do List</h1>
     <h2 className="app-subtitle">Adds, updates and removes your tasks.</h2>
     {/* Componente para adicionar novas tarefas */}
@@ -69,7 +70,8 @@ const handleAddTask = async (taskText) => {
 
     {/* Adiciona o ToastContainer para exibir as mensagens de sucesso ou erro */}
     <ToastContainer />
-  </div>
+    </div>
+  </main>
   <footer className="footer-container">
     <h3 className="footer-title">Desenvolvido por Jaqueline de Almeida</h3>
     <p className="footer-subtitle">&copy;  | 2025</p>

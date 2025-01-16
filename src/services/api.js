@@ -23,3 +23,5 @@ export const addTask = async (task) => {
 export const deleteTask = async (id) => {
   await api.delete(`/tasks/${id}`);
 };
+
+
