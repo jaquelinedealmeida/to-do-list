@@ -1,0 +1,88 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Manjari', sans-serif;
+}
+
+body {
+  background-color: rgb(200, 179, 18);
+  margin: 0 4%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  text-align: center;
+  margin: 100px auto 100px;
+  height: 130hv;;
+  max-width: 40rem;
+  padding: 0px 0px 32px 0px;
+  border-radius: 14px;
+  box-shadow: 0px 24px 80px rgba(0, 45, 37, 0.24);
+}
+
+.app-title {
+  text-align: center;
+  margin: 40px auto 32px auto;
+  display: inline-block;
+  font-size: 4rem;
+  color: #74076c;
+}
+
+.app-subtitle{
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: #964dce;
+  margin-bottom: 4rem;
+}
+
+.app-tasks{
+  width: 80%;
+  display: inline-block;
+  padding-inline-start: 0;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.footer-title{
+  font-size: 1.2rem;
+  color: #74076c;
+}
+
+.footer-subtitle{
+  font-size: 1.2rem;
+  color: #964dce;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .app-subtitle{
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (max-width: 320px) {
+
+  .app-title {
+    font-size: 3rem;
+  }
+
+  .app-subtitle{
+    font-size: 1rem;
+    width: 60%;
+  }
+}

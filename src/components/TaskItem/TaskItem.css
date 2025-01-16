@@ -1,0 +1,52 @@
+li {
+  text-align: left;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(113, 10, 151);
+  background-color: rgb(247, 239, 248);
+  padding: 10px 20px;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+  width: 100%;
+}
+
+.task-item-text{
+  width: 100%;
+}
+
+.btn-remove {
+  background-color: #fe3030;
+  color: white;
+  width: 15%;
+  border-radius: 20%;
+  font-size: 35px;
+  cursor: pointer;
+  border: 0px;
+}
+
+.btn-remove:hover {
+  background-color: #ea7b7b;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 480px) {
+  .task-item-text{
+    padding: 0;
+  }
+
+  .btn-remove {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+}
+
+
+
+

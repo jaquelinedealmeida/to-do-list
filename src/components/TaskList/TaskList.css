@@ -1,0 +1,39 @@
+.task-list-no-adds {
+  text-align: center;
+}
+
+.tasks-list-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: aliceblue;
+}
+ 
+.tasks-list-container{
+  align-items: center;
+  padding: 20px 30px;
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+  background-color: #a27ab0;
+  border-radius: 10px;
+  color: rgb(133, 23, 67);
+  font-weight: bold;
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .tasks-list-title{
+    font-size: 2rem;
+  }
+
+  .tasks-list {
+    font-size: 1rem;
+  }
+}
