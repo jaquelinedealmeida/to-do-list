@@ -1,49 +1,74 @@
-# BASIC PYTHON
+# To do List APP
 
-## Task Automation
+Uma aplicação para criar, atualizar e remover tarefas. 
 
-First class about Python at Hashtag Treinamentos.
+## Arquitetura do Projeto
 
-## Objective
+Este projeto utiliza uma arquitetura de **SPA (Single Page Application)** com **cliente-servidor**. A aplicação foi criada em React para fornecer uma interface de usuário dinâmica e responsiva. As operações de CRUD (Create, Read, Update, Delete) são realizadas através de uma API REST, e os dados são armazenados em um mock de banco de dados utilizando `db.json`.
 
-Automate register products on system company
+### Principais Componentes:
 
-### Step 1: Get in system on company
+- **React**: Biblioteca JavaScript para construção da interface de usuário.
+- **API REST**: Interface para comunicação entre o cliente e o servidor, permitindo operações de CRUD.
+- **Mock de Banco de Dados (`db.json`)**: Utilizado para armazenar a lista de tarefas adicionadas.
+- **Axios**: Biblioteca para fazer requisições HTTP para a API REST.
+- **Toast**: Biblioteca para exibição de mensagens de sucesso, exclusão e erros.
 
-[https://dlp.hashtagtreinamentos.com/python/intensivao/tabela]
-This system is fake. Anyone e-mail can be register.
+Esta arquitetura permite uma separação entre a lógica de apresentação (frontend) e a lógica de negócios (backend), facilitando a manutenção e escalabilidade do projeto.
 
-### Step 2: Get Login
+### Estrutura
 
-- Adds e-mail and password
+todo-list/
+├── node_modules/       
+├── public/              # Arquivos estáticos públicos
+├── src/                 # Código-fonte principal
+│   ├── components/      # Componentes organizados em subpastas
+│   │   ├── AddTask/
+│   │   │   ├── AddTask.jsx
+│   │   │   ├── AddTask.css
+│   │   ├── TaskItem/
+│   │   │   ├── TaskItem.jsx
+│   │   │   ├── TaskItem.css
+│   │   ├── TaskList/
+│   │   │   ├── TaskList.jsx
+│   │   │   ├── TaskList.css
+│   ├── App/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   ├── styles/           # Estilos globais e variáveis
+│   │   ├── variables.css
+│   ├── services/         # (opcional) Requisições à API, como 
+│       ├── api.js
+├── server/              # Arquivos relacionados ao servidor
+│   ├── db.json
+├── .gitignore          
+├── package.json        
+└── README.md       
 
-### Step 3: Import database
 
-- With Pandas: ´pip install pandas numpy openpyxl´ - any database type
-- With function .read it is possible read any file type
+## Scripts
 
-### Step 4: Register one product
+### `npm start`
 
-Adds the field name on the function write. After press function with value "tab".
+Inicializa o app no modo desenvolvimento. 
+Abra [http://localhost:3000](http://localhost:3000) para ver no seu navegador. 
 
-### Step 5: Repeat process until register all database
 
-Adds the function ´scroll´ to that the screen returns to the beginning and fill all table.
+### `npm run server`
 
-Important:
+Inicializa o servidor na porta 5000. 
 
-- When the field is empty, adds a condition to that value don't get fill.
-- To stop the automation, click on the superior corner on the screen
+### `npm run build`
 
-## Command
+Constrói a aplicação em produção. 
 
-- pyautogui.click -> click anywhere on the screen
-- pyautogui.write -> write a text
-- pyautogui.press -> press one key on keyboard
 
-More command: [https://docs.python.org/3/using/cmdline.html]
+`npm install -g serve`
 
-Jaqueline de Almeida
+Instala o servidor globalmente
 
-- Software development - Ruby on Rails, NodeJs, Javascript
-- Linkedin [https://www.linkedin.com/in/jaqueline-de-almeida/]
+`serve -s build`
+Roda o servidor localmente para visualização da aplicação em produção.
+
+###
+Desenvolvido por Jaqueline de Almeida
