@@ -20,52 +20,30 @@ Esta arquitetura permite uma separação entre a lógica de apresentação (fron
 
 ### Estrutura
 
-todo-list/
-├── node_modules/       
-├── public/              # Arquivos estáticos públicos
-├── src/                 # Código-fonte principal
-│   ├── components/      # Componentes organizados em subpastas
-│   │   ├── AddTask/
-│   │   │   ├── AddTask.jsx
-│   │   │   ├── AddTask.css
-│   │   ├── TaskItem/
-│   │   │   ├── TaskItem.jsx
-│   │   │   ├── TaskItem.css
-│   │   ├── TaskList/
-│   │   │   ├── TaskList.jsx
-│   │   │   ├── TaskList.css
-│   ├── App/
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   ├── styles/           # Estilos globais e variáveis
-│   │   ├── variables.css
-│   ├── services/         # (opcional) Requisições à API, como 
-│       ├── api.js
-├── server/              # Arquivos relacionados ao servidor
-│   ├── db.json
-├── .gitignore          
-├── package.json        
-└── README.md       
+![Estrutura](image.png)  
+
 
 ## Deploy
+O deploy em produção foi feito no Netlify.
 
-bash
-`npm start`
+### Scripts Disponíveis
 
-Inicializa o app no modo desenvolvimento. 
-Abra [http://localhost:3000](http://localhost:3000) para ver no seu navegador. 
+#### `npm start`
+Inicializa o app no modo desenvolvimento.  
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 
- `npm run server`
+#### `npm run server`
+Inicializa o servidor JSON na porta 5000.
 
-Inicializa o servidor na porta 5000. 
+#### `npm run build`
+Cria a versão de produção da aplicação na pasta `build`.
 
- `npm run build`
+#### `serve -s build`
+Serve a aplicação a partir da pasta `build` utilizando o servidor estático.  
+Certifique-se de que o comando `serve` está instalado globalmente:  
+```bash
+npm install -g serve
 
-Inicializa a aplicação em produção. 
-
-`serve -s build`
-
-Inicializa o servidos  na pasta build.
 
 ## Link da aplicação
 
