@@ -13,7 +13,7 @@ const AddTask = ({ onAddTask }) => {
       return;
     }
     onAddTask(taskText);
-    setTaskText(""); // Limpa o campo após adicionar
+    setTaskText(""); // Clean the field after adds the task.
   };
 
 

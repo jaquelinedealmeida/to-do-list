@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AddTask from "../components/AddTask/AddTask.js"; 
-import { getTasks, addTask,deleteTask } from "../services/api.js" ; // getTasks pode ser usado para buscar as tarefas
+import { getTasks, addTask, updateTask, deleteTask } from "../services/api.js" ; // 
 import './App.css'; 
 import TaskList from "../components/TaskList/TaskList.js"; 
 import { ToastContainer } from "react-toastify";
@@ -10,49 +10,65 @@ import { toast } from "react-toastify";
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
-  // Função para buscar tarefas
-
-const fetchTasks = async () => {
-  try {
-    const fetchedTasks = await getTasks();
-    setTasks(fetchedTasks);
-  } catch (error) {
-    toast.error("Erro ao carregar as tarefas.");
-  }
-};
-
-const handleAddTask = async (taskText) => {
-  if (!taskText.trim()) {
-    toast.error("A tarefa não pode estar vazia.");
-    return;
-  }
-
-  try {
-    const newTask = await addTask({ text: taskText });
-    setTasks((prevTasks) =>
-      [...prevTasks, newTask].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
-    );
-    toast.success("Tarefa adicionada com sucesso!");
-  } catch (error) {
-    toast.error("Erro ao adicionar a tarefa.");
-  }
-};  
-
-  // Função para remover a tarefa
-  const handleTaskRemove = async (taskId) => {
-    try {
-      await deleteTask(taskId); // Chama a API para deletar a tarefa
-      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId)); // Atualiza o estado
-      toast.success("Tarefa removida com sucesso!"); // Exibe o Toast de sucesso
-    } catch (error) {
-      toast.error("Erro ao remover a tarefa. Tente novamente!"); // Exibe o Toast de erro
-    }
-  };
-
-  // UseEffect para carregar as tarefas ao montar o componente
+  // UseEffect to fetch the tasks when the component is mounted.
   useEffect(() => {
     fetchTasks();
   }, []);
+
+  // Function to fetch the tasks
+  const fetchTasks = async () => {
+    try {
+      const fetchedTasks = await getTasks();
+      setTasks(fetchedTasks);
+    } catch (error) {
+      toast.error("Error to fetch the tasks. Try again later!");
+    }
+  };
+
+  //Function to add a new task
+  const handleAddTask = async (taskText) => {
+    if (!taskText.trim()) {
+      toast.error("Task cannot be empty");
+      return;
+    }
+
+    try {
+      const newTask = await addTask({ text: taskText });
+      setTasks((prevTasks) =>
+        //Adds a new task on the array of tasks and sort them by createdAt date
+        [...prevTasks, newTask].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
+      );
+      toast.success("Task added successfully!");
+    } catch (error) {
+      toast.error("Error adding the task. Try again later!");
+    }
+  };  
+
+  // Function to update the task
+  const handleUpdateTask = async (updatedTask) => {
+    try {
+      const updatedTaskFromAPI = await updateTask(updatedTask.id, updatedTask); 
+      setTasks((prevTasks) => 
+        prevTasks.map((task) =>
+          task.id === updatedTaskFromAPI.id ? updatedTaskFromAPI : task
+        )
+      );
+      toast.success("Task updated successfully!"); 
+    } catch (error) {
+      toast.error("Error updating the task. Try again later!"); 
+    }
+  };
+
+  // Function to remove the task
+  const handleTaskRemove = async (taskId) => {
+    try {
+      await deleteTask(taskId); 
+      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId)); 
+      toast.success("Task was remove with success!"); 
+    } catch (error) {
+      toast.error("Error to remove the task. Try again later!"); 
+    }
+  };
 
   return (
 <>
@@ -65,7 +81,7 @@ const handleAddTask = async (taskText) => {
 
     <ul className="app-tasks">
       {/* Passando as tarefas para o TaskList */}
-      <TaskList tasks={tasks} onRemoveTask={handleTaskRemove} />  
+      <TaskList tasks={tasks} onRemoveTask={handleTaskRemove} onUpdateTask={handleUpdateTask} />
     </ul>
 
     {/* Adiciona o ToastContainer para exibir as mensagens de sucesso ou erro */}

@@ -20,8 +20,15 @@ export const addTask = async (task) => {
   return data;
 };
 
+export const updateTask = async (id, task) => {
+  const response = await api.put(`/tasks/${id}`, task); // Use PUT ou PATCH conforme necessário
+  return response.data;
+};
+
 export const deleteTask = async (id) => {
   await api.delete(`/tasks/${id}`);
 };
+
+
 
 
