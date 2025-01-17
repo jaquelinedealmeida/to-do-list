@@ -18,15 +18,25 @@ Esta arquitetura permite uma separação entre a lógica de apresentação (fron
 
 
 
-### Estrutura
+## Estrutura
 
 ![Estrutura](image.png)  
 
+## Visualização da aplicação
+![Visão geral](app-visão-geral-task.png) 
+
+![Visão geral](app-nova-task.png) 
+
+![Visão geral](app-remover-task.png) 
+
+![Visão geral](app-atualizar-task.png) 
+
+![Visão geral](app-sem-task.png) 
 
 ## Deploy
 O deploy em produção foi feito no Netlify.
 
-### Scripts Disponíveis
+## Scripts Disponíveis
 
 #### `npm start`
 Inicializa o app no modo desenvolvimento.  
@@ -40,10 +50,6 @@ Cria a versão de produção da aplicação na pasta `build`.
 
 #### `serve -s build`
 Serve a aplicação a partir da pasta `build` utilizando o servidor estático.  
-Certifique-se de que o comando `serve` está instalado globalmente:  
-```bash
-npm install -g serve
-
 
 ## Link da aplicação
 
