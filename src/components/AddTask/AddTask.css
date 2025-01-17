@@ -1,3 +1,5 @@
+@import '../../styles/variables.css';
+
 .task-form {
   display: flex;
   gap: 1rem;
@@ -6,11 +8,11 @@
 
 .task-add-input {
   padding: 10px;
-  background-color: #E6EEC6;
+  background-color: var(--color-input-new-task);
   border-radius: 24px;
   border: 0px;
   margin-bottom: 2rem;
-  color: #6b1183; 
+  color: var(--color-text-tasks);
   text-align: left;
   font-size: 1.1rem; 
   font-weight: bold;
@@ -18,16 +20,16 @@
   width: 100%;
 }
 
-input:focus {
+.task-add-input:focus {
   outline: none;
-  border: solid 3px #B0CF30;
+  border: solid 3px var(--color-input-hover);
 }
 
 .add-task-button {
   padding: 6px 10px;
-  background-color: #d70ba7;
+  background-color: var(--color-button-add-task);
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  color: var(--color-secondary);
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -39,15 +41,15 @@ input:focus {
 }
 
 .add-task-button:hover {
-  background-color: #99227d;
-  box-shadow: 0px 16px 24px rgba(126, 119, 160, 0.267);
+  background-color: var( --color-button-add-hover);
+  box-shadow: 0px 16px 18px var(--color-shadow);
   width: 50px;
   height: 50px;
   transition: 0.3s;
 }
 
 ::placeholder {
-  color: #905f9e;
+  color: var(--color-placeholder);
   text-align: center;
   font-size: .9rem;
 }
@@ -68,11 +70,8 @@ input:focus {
   }
 
   .add-task-button:hover {
-    background-color: #99227d;
-    box-shadow: 0px 16px 24px rgba(126, 119, 160, 0.267);
     width: 55%;
     transition: 0.3s;
-    
   }
 
   @media (max-width: 320px){
@@ -80,7 +79,6 @@ input:focus {
       width: 80%;
     }
   }
-  
 }
 
 

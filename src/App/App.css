@@ -1,10 +1,12 @@
+@import '../styles/variables.css';
+
 *{
   box-sizing: border-box;
   font-family: 'Manjari', sans-serif;
 }
 
 body {
-  background-color: rgb(200, 179, 18);
+  background-color: var(--color-primary);
   margin: 0 4%;
 }
 
@@ -12,13 +14,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--color-secondary);
   text-align: center;
   margin: 100px auto 60px;
   max-width: 40rem;
   padding: 0px 0px 32px 0px;
   border-radius: 14px;
-  box-shadow: 0px 24px 80px rgba(0, 45, 37, 0.24);
+  box-shadow: 0px 24px 80px var(--color-shadow);
 }
 
 .app-title {
@@ -26,14 +28,14 @@ body {
   margin: 40px auto 32px auto;
   display: inline-block;
   font-size: 4rem;
-  color: #74076c;
+  color: var(--color-title);
 }
 
 .app-subtitle{
   font-size: 1.2rem;
   text-align: center;
   margin: 1rem 0;
-  color: #964dce;
+  color: var(--color-subtitle);
   margin-bottom: 4rem;
 }
 
@@ -51,12 +53,13 @@ body {
 
 .footer-title{
   font-size: 1.2rem;
-  color: #74076c;
+  color:var(--color-title);
 }
+
 
 .footer-subtitle{
   font-size: 1.2rem;
-  color: #593177;
+  color: var(--color-subtitle);
   font-weight: 600;
 }
 

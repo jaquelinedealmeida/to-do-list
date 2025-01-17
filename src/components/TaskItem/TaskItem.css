@@ -2,11 +2,6 @@ li {
   text-align: left;
 }
 
-input:focus {
-  outline: none;
-  border: solid 3px #B0CF30;
-}
-
 .task-edit-input {
   padding: 10px;
   border-radius: 24px;
@@ -14,19 +9,23 @@ input:focus {
   border: 0px;
   font-size: 1.1rem; 
   font-weight: bold;
-  color: #6b1183; 
+  color: var(--color-text-tasks);
+}
+
+.task-edit-input:focus {
+  outline: none;
+  border: solid 3px var(--color-input-hover);
 }
  
 .task-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: rgb(113, 10, 151);
-  background-color: rgb(247, 239, 248);
+  color: var(--color-text-tasks);
+  background-color: var(--color-input-task-item);
   padding: 10px 20px;
   margin: 30px 0;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   gap: 2rem;
 }
 
@@ -35,7 +34,7 @@ input:focus {
 }
 
 .btn-remove, .btn-update, .btn-save, .btn-cancel {
-  color: white;
+  color: var(--color-secondary);
   width: 40px; 
   height: 40px; 
   border-radius: 20%;
@@ -54,20 +53,20 @@ input:focus {
 }
 
 .btn-update, .btn-save {
-  background-color: #05c35e;
+  background-color: var(--color-button-update-save);
 }
 
 .btn-update:hover, .btn-save:hover {
-  background-color: #069147;
+  background-color: var(--color-button-hover-update-save);
   transition: 0.5s;
 }
 
 .btn-remove, .btn-cancel {
-  background-color: #fd2323;
+  background-color: var(--color-button-delete-cancel);
 }
 
 .btn-remove:hover, .btn-cancel:hover {
-  background-color: #dc0505;
+  background-color: var(--color-button-hover-delete-cancel);
   transition: 0.3s;
 }
 
@@ -84,7 +83,7 @@ input:focus {
   .btn-update, .btn-save, .btn-cancel, .btn-remove {
     height: auto;
     font-size: 25px;
-    widt
+    width: 30px;
   }
 
   .btn-save {

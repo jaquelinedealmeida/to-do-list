@@ -1,7 +1,22 @@
 :root {
-  --color-primary: #3498db;
-  --color-secondary: #2ecc71;
-  --color-danger: #e74c3c;
-  --color-background: #f5f5f5;
-  --color-text: #333;
+  --color-primary: #ecd6ac;
+  --color-secondary:  #ffffff;
+  --color-title: #441752;
+  --color-subtitle: #8174A0;
+  --color-input-new-task: #f0eaea;
+  --color-input-hover: #d588ea;
+  --color-text-tasks: #69247C;
+  --color-placeholder: #905f9e;
+  --color-button-add-task:  #DA498D;
+  --color-button-add-hover:#bb0c5e;
+  --color-background-tasks: #A888B5;
+  --color-input-task-item: #f7eff8;
+  --color-button-update-save: #2fac6a;
+  --color-button-hover-update-save: #128a4a;;
+  --color-button-delete-cancel: #d45555;
+  --color-button-hover-delete-cancel: #d91515;
+  --color-shadow:#F9E6CF;
 }
+
+
+
