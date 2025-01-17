@@ -46,39 +46,30 @@ input:focus {
   font-size: 35px;
 }
 
-.btn-update {
+.btn-save {
+  display: flex;
+  align-items: center;
+}
+
+ .btn-cancel {
+  font-size: 30px;
+}
+
+.btn-update, .btn-save {
   background-color: #05c35e;
 }
 
-.btn-update:hover {
+.btn-update:hover, .btn-save:hover {
   background-color: #069147;
   transition: 0.5s;
 }
 
-.btn-remove {
+.btn-remove, .btn-cancel {
   background-color: #fd2323;
 }
 
-.btn-remove:hover {
+.btn-remove:hover, .btn-cancel:hover {
   background-color: #dc0505;
-  transition: 0.3s;
-}
-
-.btn-save {
-  background-color: #0b7dc0;
-}
-
-.btn-save:hover {
-  background-color: #104e90;
-  transition: 0.3s;
-}
-
-.btn-cancel {
-  background-color: #71744d;
-}
-
-.btn-cancel:hover {
-  background-color: #3b3e1d;
   transition: 0.3s;
 }
 
@@ -92,7 +83,7 @@ input:focus {
     gap: 1rem;
   }
 
-  .btn-update {
+  .btn-update, .btn-save, .btn-cancel {
     height: auto;
     font-size: 25px;
   }
