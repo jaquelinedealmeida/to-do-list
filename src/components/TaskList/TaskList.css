@@ -24,7 +24,7 @@
   list-style: none;
   padding: 0;
   margin-bottom: 30px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -34,5 +34,9 @@
 
   .tasks-list {
     font-size: 1rem;
+  }
+
+  .tasks-list-container {
+    padding: 10px;
   }
 }

@@ -15,7 +15,6 @@ body {
   background-color: #fff;
   text-align: center;
   margin: 100px auto 60px;
-  height: 130hv;;
   max-width: 40rem;
   padding: 0px 0px 32px 0px;
   border-radius: 14px;
@@ -39,7 +38,7 @@ body {
 }
 
 .app-tasks{
-  width: 80%;
+  width: 90%;
   display: inline-block;
   padding-inline-start: 0;
 }

@@ -1,9 +1,8 @@
 {
   "tasks": [
     {
-      "text": "new task",
-      "id": 1,
-      "status": "active"
+      "text": "uma nova task para chamar de minha",
+      "id": 3
     }
   ]
 }

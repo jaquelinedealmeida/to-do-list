@@ -24,7 +24,7 @@ const AddTask = ({ onAddTask }) => {
       type="text"
       value={taskText}
       onChange={(e) => setTaskText(e.target.value)}
-      placeholder="Type a task and press enter."
+      placeholder="Type a task and press the button"
     />
     <button className="add-task-button" type="submit" >
       +

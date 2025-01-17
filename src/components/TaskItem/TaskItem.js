@@ -10,8 +10,8 @@ const TaskItem = ({ task, onRemove, onUpdate }) => {
 
   // Switch between edit and view mode
   const handleEditedClick = () => {
-    setEditedText(task.text); // Inicializa o estado com o texto atual da tarefa
-    setIsEditing(true); // Ativa o modo de edição
+    setEditedText(task.text); // Initialize the state with the current task text
+    setIsEditing(true); // Activates edit mode
   };
 
   // Save the edition
@@ -26,7 +26,7 @@ const TaskItem = ({ task, onRemove, onUpdate }) => {
 
   // Cancel the edition
   const handleCancelClick = () => {
-    setEditedText(task.text); // Restaura o texto original
+    setEditedText(task.text); // Restores the original text
     setIsEditing(false);
   };
 
@@ -38,16 +38,16 @@ const TaskItem = ({ task, onRemove, onUpdate }) => {
             className="task-edit-input"
             type="text"
             value={editedText}
-            onChange={(e) => setEditedText(e.target.value)} // Atualiza o estado corretamente
+            onChange={(e) => setEditedText(e.target.value)} 
           />
-          <button className="btn-save" onClick={handleSaveClick}>S</button>
-          <button className="btn-cancel" onClick={handleCancelClick}>C</button>
+          <button className="btn-save" onClick={handleSaveClick} title="Save updating">✓</button>
+          <button className="btn-cancel" onClick={handleCancelClick} title="Cancel updating">x</button>
         </>
       ) : (
         <>
           <span className="task-item-text">{task.text}</span>
-          <button className="btn-update" onClick={handleEditedClick} title="Atualizar tarefa">↻</button>
-          <button className="btn-remove" onClick={() => onRemove(task.id)} title="Remover tarefa">-</button>
+          <button className="btn-update" onClick={handleEditedClick} title="Update task">↻</button>
+          <button className="btn-remove" onClick={() => onRemove(task.id)} title="Remove task">-</button>
         </>
       )}
     </li>

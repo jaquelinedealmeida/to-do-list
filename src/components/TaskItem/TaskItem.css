@@ -17,7 +17,6 @@ input:focus {
   color: #6b1183; 
 }
  
-
 .task-item {
   display: flex;
   justify-content: space-between;
@@ -29,7 +28,6 @@ input:focus {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   gap: 2rem;
-  width: 100%;
 }
 
 .task-item-text{
@@ -46,55 +44,51 @@ input:focus {
   font-size: 35px;
 }
 
-.btn-update {
+.btn-save {
+  display: flex;
+  align-items: center;
+}
+
+ .btn-cancel {
+  font-size: 30px;
+}
+
+.btn-update, .btn-save {
   background-color: #05c35e;
 }
 
-.btn-update:hover {
+.btn-update:hover, .btn-save:hover {
   background-color: #069147;
   transition: 0.5s;
 }
 
-.btn-remove {
+.btn-remove, .btn-cancel {
   background-color: #fd2323;
 }
 
-.btn-remove:hover {
+.btn-remove:hover, .btn-cancel:hover {
   background-color: #dc0505;
   transition: 0.3s;
 }
 
-.btn-save {
-  background-color: #0b7dc0;
-}
-
-.btn-save:hover {
-  background-color: #104e90;
-  transition: 0.3s;
-}
-
-.btn-cancel {
-  background-color: #71744d;
-}
-
-.btn-cancel:hover {
-  background-color: #3b3e1d;
-  transition: 0.3s;
-}
-
 @media screen and (max-width: 480px) {
+  .task-item {
+    gap: .8rem;
+  }
+
   .task-item-text{
     padding: 0;
     font-size: 1rem;
   } 
 
-  .task-item {
-    gap: 1rem;
-  }
-
-  .btn-update {
+  .btn-update, .btn-save, .btn-cancel, .btn-remove {
     height: auto;
     font-size: 25px;
+    widt
+  }
+
+  .btn-save {
+    display: inline-block;
   }
 
   .btn-remove {
@@ -112,7 +106,6 @@ input:focus {
   .task-item-text{ 
     font-size: .9rem;
   }
- 
 }
 
 

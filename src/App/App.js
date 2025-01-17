@@ -75,21 +75,21 @@ const App = () => {
   <main className="app-content">
     <div className="app-container">
     <h1 className="app-title">To do List</h1>
-    <h2 className="app-subtitle">Adds, updates and removes your tasks.</h2>
-    {/* Componente para adicionar novas tarefas */}
+    <h2 className="app-subtitle">Add, update, and removes your tasks.</h2>
+    {/* Component for adding new tasks */}
     <AddTask onAddTask={handleAddTask} />
 
     <ul className="app-tasks">
-      {/* Passando as tarefas para o TaskList */}
+      {/* Passing tasks to TaskList */}
       <TaskList tasks={tasks} onRemoveTask={handleTaskRemove} onUpdateTask={handleUpdateTask} />
     </ul>
 
-    {/* Adiciona o ToastContainer para exibir as mensagens de sucesso ou erro */}
+    {/* Adds ToastContainer to display success or error messages */}
     <ToastContainer />
     </div>
   </main>
   <footer className="footer-container">
-    <h3 className="footer-title">Desenvolvido por Jaqueline de Almeida</h3>
+    <h3 className="footer-title">Developer by Jaqueline de Almeida</h3>
     <p className="footer-subtitle">&copy;  | 2025</p>
   </footer>
 </>
