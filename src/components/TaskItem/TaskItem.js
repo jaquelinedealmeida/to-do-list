@@ -40,14 +40,14 @@ const TaskItem = ({ task, onRemove, onUpdate }) => {
             value={editedText}
             onChange={(e) => setEditedText(e.target.value)} // Atualiza o estado corretamente
           />
-          <button className="btn-save" onClick={handleSaveClick} title="Save update">✓</button>
-          <button className="btn-cancel" onClick={handleCancelClick} title="Cancel update">x</button>
+          <button className="btn-save" onClick={handleSaveClick}>S</button>
+          <button className="btn-cancel" onClick={handleCancelClick}>C</button>
         </>
       ) : (
         <>
           <span className="task-item-text">{task.text}</span>
-          <button className="btn-update" onClick={handleEditedClick} title="Update task">↻</button>
-          <button className="btn-remove" onClick={() => onRemove(task.id)} title="Remove task">-</button>
+          <button className="btn-update" onClick={handleEditedClick} title="Atualizar tarefa">↻</button>
+          <button className="btn-remove" onClick={() => onRemove(task.id)} title="Remover tarefa">-</button>
         </>
       )}
     </li>

@@ -1,8 +1,16 @@
 {
   "tasks": [
     {
-      "text": "testando task",
+      "text": "task pequena",
       "id": 1
+    },
+    {
+      "text": "vou escrever uma nova task agora",
+      "id": 2
+    },
+    {
+      "text": "uma nova task para chamar de minha",
+      "id": 3
     }
   ]
 }
