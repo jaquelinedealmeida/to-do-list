@@ -2,6 +2,22 @@ li {
   text-align: left;
 }
 
+input:focus {
+  outline: none;
+  border: solid 3px #B0CF30;
+}
+
+.task-edit-input {
+  padding: 10px;
+  border-radius: 24px;
+  width: 70%;
+  border: 0px;
+  font-size: 1.1rem; 
+  font-weight: bold;
+  color: #6b1183; 
+}
+ 
+
 .task-item {
   display: flex;
   justify-content: space-between;
@@ -20,15 +36,27 @@ li {
   width: 100%;
 }
 
-.btn-remove {
-  background-color: #fd2323;
+.btn-remove, .btn-update, .btn-save, .btn-cancel {
   color: white;
   width: 40px; 
   height: 40px; 
   border-radius: 20%;
-  font-size: 35px;
   cursor: pointer;
   border: 0px;
+  font-size: 35px;
+}
+
+.btn-update {
+  background-color: #05c35e;
+}
+
+.btn-update:hover {
+  background-color: #069147;
+  transition: 0.5s;
+}
+
+.btn-remove {
+  background-color: #fd2323;
 }
 
 .btn-remove:hover {
@@ -36,16 +64,46 @@ li {
   transition: 0.3s;
 }
 
+.btn-save {
+  background-color: #0b7dc0;
+}
+
+.btn-save:hover {
+  background-color: #104e90;
+  transition: 0.3s;
+}
+
+.btn-cancel {
+  background-color: #71744d;
+}
+
+.btn-cancel:hover {
+  background-color: #3b3e1d;
+  transition: 0.3s;
+}
+
 @media screen and (max-width: 480px) {
   .task-item-text{
     padding: 0;
+    font-size: 1rem;
+  } 
+
+  .task-item {
+    gap: 1rem;
+  }
+
+  .btn-update {
+    height: auto;
+    font-size: 25px;
   }
 
   .btn-remove {
     border-radius: 50%;
-    height: 30px;
+    width: 45px;
+    height: 35px;
+    font-size: 30px;
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
+    align-items: center; 
     justify-content: center;
   }
 }

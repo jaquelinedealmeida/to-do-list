@@ -6,14 +6,13 @@
 
 .task-add-input {
   padding: 10px;
-  
   background-color: #E6EEC6;
   border-radius: 24px;
   border: 0px;
   margin-bottom: 2rem;
   color: #6b1183; 
-  text-align: center; 
-  font-size: 1rem; 
+  text-align: left;
+  font-size: 1.1rem; 
   font-weight: bold;
   height: 55px;
   width: 100%;
@@ -26,7 +25,7 @@ input:focus {
 
 .add-task-button {
   padding: 6px 10px;
-  background-color: #7c0b9b;
+  background-color: #d70ba7;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   width: 50px;
