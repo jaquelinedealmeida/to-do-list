@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #ecd6ac;
+  --color-primary: #fed177;
   --color-secondary:  #ffffff;
   --color-title: #441752;
   --color-subtitle: #8174A0;
@@ -15,7 +15,7 @@
   --color-button-hover-update-save: #128a4a;;
   --color-button-delete-cancel: #d45555;
   --color-button-hover-delete-cancel: #d91515;
-  --color-shadow:#F9E6CF;
+  --color-shadow:#826b4e;
 }
 
 
