@@ -23,15 +23,15 @@ Esta arquitetura permite uma separação entre a lógica de apresentação (fron
 ![Estrutura](image.png)  
 
 ## Visualização da aplicação
-![Visão geral](app-visão-geral-task.png) 
+![Visão geral](app-visão-geral.png) 
 
-![Visão geral](app-nova-task.png) 
+![Nova task](app-nova-task.png) 
 
-![Visão geral](app-remover-task.png) 
+![Remover task](app-remover-task.png) 
 
-![Visão geral](app-atualizar-task.png) 
+![Atualizar](app-atualizar-task.png) 
 
-![Visão geral](app-sem-task.png) 
+![Sem task](app-sem-task.png) 
 
 ## Deploy
 O deploy em produção foi feito no Netlify.
