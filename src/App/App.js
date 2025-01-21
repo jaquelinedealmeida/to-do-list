@@ -75,8 +75,10 @@ const App = () => {
   <main className="app-content">
     <div className="app-container">
     <h1 className="app-title">To do List</h1>
-    <h2 className="app-subtitle">Add, update, and removes your tasks.</h2>
+    <h2 className="app-subtitle">Add, update, and remove your tasks each day.</h2>
+    
     {/* Component for adding new tasks */}
+    
     <AddTask onAddTask={handleAddTask} />
 
     <ul className="app-tasks">
@@ -90,7 +92,7 @@ const App = () => {
   </main>
   <footer className="footer-container">
     <h3 className="footer-title">Developer by Jaqueline de Almeida</h3>
-    <p className="footer-subtitle">&copy;  | 2025</p>
+    <p className="footer-subtitle">&copy; | 2025</p>
   </footer>
 </>
      

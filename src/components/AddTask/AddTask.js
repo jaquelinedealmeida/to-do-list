@@ -16,7 +16,6 @@ const AddTask = ({ onAddTask }) => {
     setTaskText(""); // Clean the field after adds the task.
   };
 
-
   return (
     <form className="task-form" onSubmit={handleSubmit}>
       <input
