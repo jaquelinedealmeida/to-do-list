@@ -1,23 +1,14 @@
-import express from 'express';
-import { join } from 'path';
-import { router as _router, defaults } from 'json-server';
-const { static: serveStatic } = express;
-
-const app = express();
+import { create, router as _router, defaults } from 'json-server';
+const server = create();
 const router = _router('db.json');
 const middlewares = defaults();
 
 const PORT = process.env.PORT || 5000;
 
-app.use(serveStatic(join(__dirname, 'build')));
+server.use(middlewares);
+server.use(router);
 
-app.use('/api', middlewares, router);
 
-
-app.get('*', (req, res) => {
-  res.sendFile(join(__dirname, 'build', 'index.html'));
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`JSON Server is running on port ${PORT}`);
 });
