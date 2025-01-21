@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import TaskItem from "../TaskItem/TaskItem";
+import TaskItem from "../TaskItem/TaskItem.js";
 import '../TaskList/TaskList.css';
 
 /* function to map items on the list of tasks and your buttons*/

@@ -9,11 +9,10 @@ export const getTasks = async () => {
     const { data } = await api.get("/tasks");
     return data;
   } catch (error) {
-    console.error("Erro ao buscar tarefas:", error);
+    console.error("Error to get the tasks:", error);
     throw error;
   }
 };
-
 
 export const addTask = async (task) => {
   const { data } = await api.post("/tasks", task);
