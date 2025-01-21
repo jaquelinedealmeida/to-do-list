@@ -15,12 +15,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:dev": "react-scripts start",
     "build": "react-scripts build",
+    "serve": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000",
-    "serve": "serve -s build"
+    "server:dev": "json-server --watch db.json --port 5000",
+    "server:prod": "json-server --watch db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [

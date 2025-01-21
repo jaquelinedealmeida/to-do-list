@@ -10,7 +10,7 @@ export const getTasks = async () => {
     return data;
   } catch (error) {
     console.error("Erro ao buscar tarefas:", error);
-    throw error; // Lança o erro para ser tratado em outro lugar
+    throw error;
   }
 };
 
@@ -21,7 +21,7 @@ export const addTask = async (task) => {
 };
 
 export const updateTask = async (id, task) => {
-  const response = await api.put(`/tasks/${id}`, task); // Use PUT ou PATCH conforme necessário
+  const response = await api.put(`/tasks/${id}`, task);
   return response.data;
 };
 

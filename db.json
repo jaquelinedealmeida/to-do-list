@@ -1,12 +1,8 @@
 {
   "tasks": [
     {
-      "text": "mudando a task",
-      "id": 1
-    },
-    {
       "text": "nova task",
-      "id": 2
+      "id": 1
     }
   ]
 }
