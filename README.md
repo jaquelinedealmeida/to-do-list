@@ -43,7 +43,7 @@ Inicializa o app no modo desenvolvimento.
 Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 
 #### `npm run server`
-Inicializa o servidor JSON na porta 5000.
+Inicializa o servidor JSON na porta 5000 em desenvolvimento.
 
 #### `npm run build`
 Cria a versão de produção da aplicação na pasta `build`.
@@ -51,10 +51,11 @@ Cria a versão de produção da aplicação na pasta `build`.
 #### `serve -s build`
 Serve a aplicação a partir da pasta `build` utilizando o servidor estático.  
 
+
 ## Link da aplicação
 
 https://app-my-tasks.netlify.app/
 
 ## Autores
 
-- [@ojaqueline-de-almeida](https://github.com/jaquelinedealmeida)
+- [@jaqueline-de-almeida](https://github.com/jaquelinedealmeida)
